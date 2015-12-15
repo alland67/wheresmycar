@@ -1,0 +1,16 @@
+<ion-view view-title="Home" ng-controller="HomeCtrl as vm">
+  <ion-content class="padding">
+  	<button class="button button-block button-positive" ng-click="vm.NavigateToCar()">Find My Car</button>
+    <button class="button button-block button-positive" ng-click="vm.ParkMyCar()">Park My Car</button>
+    <button class="button button-block button-positive" ng-click="vm.UnparkMyCar()">UnPark My Car</button>
+    <button class="button button-block button-positive" href="#/app/about">About</button>
+    <div class="card" ng-show="vm.isCarParked()">
+      <div class="item item-text-wrap">
+        <b>Car Location</b><br/>
+        Lat : {{vm.car.lat}}</br>
+        Lon : {{vm.car.lon}}</br>
+        Address: {{vm.car.address}}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
